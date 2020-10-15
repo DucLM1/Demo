@@ -1,3 +1,4 @@
+using Demo.Filters;
 using Demo.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -20,6 +21,11 @@ namespace Demo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //services.AddControllersWithViews(options =>
+            //{
+            //    options.Filters.Add(typeof(TimeElapsedFilter),
+            //                        int.MinValue);
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -61,9 +67,9 @@ namespace Demo
             //app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/robots.txt"), b =>
             //    b.UseMiddleware<RobotsTxtMiddleware>(env.EnvironmentName, env.WebRootPath));
 
-            app.UseCachePageMiddleware();
-            app.UseReturnMiddleware();
-            app.UseRedirect301Middleware();
+            //app.UseCachePageMiddleware();
+            //app.UseReturnMiddleware();
+            //app.UseRedirect301Middleware();
 
             app.UseEndpoints(endpoints =>
             {

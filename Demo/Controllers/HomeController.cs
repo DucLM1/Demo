@@ -1,4 +1,5 @@
-﻿using Demo.Middlewares;
+﻿using Demo.Filters;
+using Demo.Middlewares;
 using Demo.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -6,6 +7,7 @@ using System.Diagnostics;
 
 namespace Demo.Controllers
 {
+    //[HybridActtionFilter]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -14,12 +16,16 @@ namespace Demo.Controllers
         {
             _logger = logger;
         }
-
+        //[HttpsOnlyFilter]
         public IActionResult Index()
         {
             return View();
         }
 
+
+        //[TimeElapsedFilter]
+        //[ChangeViewFilter]
+        
         public IActionResult Privacy()
         {
             return View();
@@ -29,16 +35,14 @@ namespace Demo.Controllers
         /// MiddlewareFilter Case 1
         /// </summary>
         /// <returns></returns>
-        [MiddlewareFilter(typeof(ActionFilterAtribute))]
+        [MiddlewareFilter(typeof(ActionFilterBuilder))]
         public IActionResult Testing()
         {
             return View();
         }
 
-        /// <summary>
-        /// MiddlewareFilter Case 2
-        /// </summary>
-        /// <returns></returns>
+        // Built-in-filter
+        //[RequireHttps]
         public IActionResult Testing2()
         {
             return View();

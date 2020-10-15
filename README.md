@@ -40,13 +40,13 @@ public class ReturnMiddleware
 *Disclaimer: I am not going to explain all about filters, so if you are interested in this topic, I suggest you check the Microsoft documentation*
 - Filters in .NET Core allow code to be run before or after specific stages in the request processing pipeline.
 - Filters run within the .NET Core action invocation pipeline, sometimes referred to as the filter pipeline. The filter pipeline runs after .NET Core selects the action to execute.
-- Built-in filters handle tasks such as:  **Authorization**, **Response caching**
+- Built-in filters handle tasks such as:  **Authorization**, **Response caching**,...
 - Filters run at **multiple points** in MvcMiddleware in the normal handling of a request
 > How filter work
 
 ![Filter HowtoRun](./images/filter-howtorun.jpg)
 
-> .Net Core Filter Pineline 
+> A .Net Core Filter Pineline 
 
 ![Middleware Pineline](./images/filter-pineline.jpg)
 

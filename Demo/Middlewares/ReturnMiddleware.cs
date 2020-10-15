@@ -17,16 +17,21 @@ namespace Demo.Middlewares
         {
             #region Logic Request
 
-            Console.WriteLine("ReturnMiddleware Request");         
+            Console.WriteLine("ReturnMiddleware Request");
 
             #endregion Logic Request
+
+            if (context.Request.Path.Value.ToLower().Equals("/test"))
+            {
+                context.Response.Redirect("/", true);
+                return;
+            }              
 
             await _next.Invoke(context);
 
             #region Logic Response
 
             Console.WriteLine("ReturnMiddleware Response");
-            Console.WriteLine();
 
             #endregion Logic Response
         }

@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Demo.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -49,13 +44,26 @@ namespace Demo
 
             //app.Use(async (context, next) =>
             //{
-
+            //    Console.WriteLine("Use First delegate  request");
+            //    await next.Invoke();
             //});
+
+            //app.Map("/Home/Testing2", a => a.Run(async context =>
+            //{
+            //    await context.Response.WriteAsync("Use 2nd delegate.");
+            //}));
+
+            //app.Run(async context =>
+            //{
+            //    await context.Response.WriteAsync("Use 3rd delegate.");
+            //});
+
+            //app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/robots.txt"), b =>
+            //    b.UseMiddleware<RobotsTxtMiddleware>(env.EnvironmentName, env.WebRootPath));
 
             app.UseCachePageMiddleware();
             app.UseReturnMiddleware();
             app.UseRedirect301Middleware();
-
 
             app.UseEndpoints(endpoints =>
             {

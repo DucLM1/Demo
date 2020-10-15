@@ -1,10 +1,14 @@
 # Demo
-### 1. Introduction About Middleware And Filter In .Net Core
+### 1. Introduction About Middleware In .Net Core
 #### a. Middleware
 - Middleware is software that's assembled into an app pipeline to handle requests and responses.
 - The order that middleware components are added in the Startup.Configure method defines the order in which the middleware components are invoked on requests and the reverse order for the response.
-#### b. Filter
-### 2. Middle Pineline
+- Request delegates are configured using **Run**, **Map**, **Use** ( **RunWhen**, **MapWhen**, **UseWhen**)  extension methods
+
+#### b. Middle Pineline
+
+> .Net Core Middleware Pineline
+
 ![Middleware Pineline](./images/middleware-pineline.jpg)
 
 > .Net Core Middleware Code Example
@@ -31,6 +35,31 @@ public class ReturnMiddleware
     }
 ```
 
-### 3. Filter Pineline
-### 4. MiddlewareFilter
-### 5. Demo
+
+### 2. A little about filters
+*Disclaimer: I am not going to explain all about filters, so if you are interested in this topic, I suggest you check the Microsoft documentation*
+- Filters in .NET Core allow code to be run before or after specific stages in the request processing pipeline.
+- Filters run within the .NET Core action invocation pipeline, sometimes referred to as the filter pipeline. The filter pipeline runs after .NET Core selects the action to execute.
+- Built-in filters handle tasks such as:  **Authorization**, **Response caching**
+- Filters run at **multiple points** in MvcMiddleware in the normal handling of a request
+> How filter work
+
+![Filter HowtoRun](./images/filter-howtorun.jpg)
+
+> .Net Core Filter Pineline 
+
+![Middleware Pineline](./images/filter-pineline.jpg)
+
+### 3. Using Middleware as filter with MiddlewareFilterAttribute Class
+
+
+Filters are very powerful but that power has a price, the complexity. There are several filters types, with different methods to be implemented, all of these methods are called in different moments of the requests.
+
+But not always all this complexity is needed, so there is another way to get the advantages of a filter avoiding such complexity.
+
+There is another tool that allows us to use a Middleware as a filter, this is the MiddlewareFilterAttribute.
+
+- MiddlewareFilterAttribute Executes a middleware pipeline provided the by the ConfigurationType
+- The middleware will be invoked in the filter pipeline
+
+### 4. Demo

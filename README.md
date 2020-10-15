@@ -53,13 +53,11 @@ public class ReturnMiddleware
 ### 3. Using Middleware as filter with MiddlewareFilterAttribute Class
 
 
-Filters are very powerful but that power has a price, the complexity. There are several filters types, with different methods to be implemented, all of these methods are called in different moments of the requests.
+Filters are very powerful but that power has the complexity. There are several filters types, with different methods to be implemented, all of these methods are called in different moments of the requests.
 
 But not always all this complexity is needed, so there is another way to get the advantages of a filter avoiding such complexity.
 
-There is another tool that allows us to use a Middleware as a filter, this is the MiddlewareFilterAttribute.
+There is another tool that allows us to use a Middleware as a filter, this is the MiddlewareFilterAttribute. The middleware will be invoked in the filter pipeline, in the runtime execution, giving us some of the advantages of the filters with the simplicity of middlewares
 
-- MiddlewareFilterAttribute Executes a middleware pipeline provided the by the ConfigurationType
-- The middleware will be invoked in the filter pipeline
 
 ### 4. Demo

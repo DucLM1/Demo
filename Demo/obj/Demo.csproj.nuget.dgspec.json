@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DucLM\\Desktop\\Demo\\Demo\\Demo\\Demo.csproj": {}
+    "D:\\Projects\\Demo\\Demo\\Demo\\Demo.csproj": {}
   },
   "projects": {
-    "D:\\DucLM\\Desktop\\Demo\\Demo\\Demo\\Demo.csproj": {
+    "D:\\Projects\\Demo\\Demo\\Demo\\Demo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DucLM\\Desktop\\Demo\\Demo\\Demo\\Demo.csproj",
+        "projectUniqueName": "D:\\Projects\\Demo\\Demo\\Demo\\Demo.csproj",
         "projectName": "Demo",
-        "projectPath": "D:\\DucLM\\Desktop\\Demo\\Demo\\Demo\\Demo.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\DucLM\\Desktop\\Demo\\Demo\\Demo\\obj\\",
+        "projectPath": "D:\\Projects\\Demo\\Demo\\Demo\\Demo.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\Demo\\Demo\\Demo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

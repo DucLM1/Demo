@@ -47,8 +47,14 @@ namespace Demo
 
             app.UseAuthorization();
 
+            //app.Use(async (context, next) =>
+            //{
+
+            //});
+
             app.UseCachePageMiddleware();
-            //app.UseRedirect301Middleware();
+            app.UseReturnMiddleware();
+            app.UseRedirect301Middleware();
 
 
             app.UseEndpoints(endpoints =>

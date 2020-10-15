@@ -25,7 +25,7 @@ namespace Demo.Controllers
             return View();
         }
 
-        [MiddlewareFilter(typeof(ActionFilterPipeline))]
+        [MiddlewareFilter(typeof(ActionFilterAtribute))]
         public IActionResult Testing()
         {
             return View();

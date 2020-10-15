@@ -32,7 +32,7 @@ namespace Demo.Middlewares
         }
     }
 
-    public class ActionFilterPipeline
+    public class ActionFilterAtribute
     {
         public void Configure(IApplicationBuilder applicationBuilder)
         {

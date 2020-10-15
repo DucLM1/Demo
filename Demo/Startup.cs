@@ -67,6 +67,9 @@ namespace Demo
             //app.MapWhen(ctx => ctx.Request.Path.StartsWithSegments("/robots.txt"), b =>
             //    b.UseMiddleware<RobotsTxtMiddleware>(env.EnvironmentName, env.WebRootPath));
 
+            //app.UseWhen(ctx => ctx.Request.Path.StartsWithSegments("/Home/testing2"), b =>
+            //    b.UseMiddleware<CachePageMiddleware>());
+
             //app.UseCachePageMiddleware();
             //app.UseReturnMiddleware();
             //app.UseRedirect301Middleware();

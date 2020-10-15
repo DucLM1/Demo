@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace Demo.Controllers
 {
-    //[HybridActtionFilter]
+    [HybridActtionFilter]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

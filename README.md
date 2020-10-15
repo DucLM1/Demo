@@ -6,6 +6,9 @@
 #### b. Filter
 ### 2. Middle Pineline
 ![Middleware Pineline](./images/middleware-pineline.jpg)
+
+> .Net Core Middleware Code Example
+
 ```C# 
 public class ReturnMiddleware
     {
@@ -26,8 +29,8 @@ public class ReturnMiddleware
            
         }
     }
+```
 
-![Middleware Example](./images/middleware-example.jpg)
 ### 3. Filter Pineline
 ### 4. MiddlewareFilter
 ### 5. Demo

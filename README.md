@@ -46,9 +46,9 @@ public class ReturnMiddleware
 
 ![Filter HowtoRun](./images/filter-howtorun.jpg)
 
-> A .Net Core Filter Pineline 
+> The following diagram shows how filter types interact in the filter pipeline
 
-![Middleware Pineline](./images/filter-pineline.jpg)
+![Middleware Pineline](./images/filter-pineline-1.jpg)
 
 ### 3. Using Middleware as filter with MiddlewareFilterAttribute Class
 

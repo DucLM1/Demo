@@ -1,3 +1,5 @@
+https://www.lucidchart.com/techblog/2016/11/08/angular-2-and-observables-data-sharing-in-a-multi-view-application/
+https://viblo.asia/p/angular-2-observable-mot-goc-nhin-ve-chia-se-du-lieu-trong-ung-dung-angular-RQqKLO7z57z
 # Demo
 ### 1. Introduction About Middleware In .Net Core
 #### a. Middleware
